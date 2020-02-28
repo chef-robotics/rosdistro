@@ -219,6 +219,16 @@ opcua-pip:
   ubuntu:
     pip:
       packages: [opcua]
+python-open3d-pip:
+  debian:
+    pip:
+      packages: [open3d-python]
+  fedora:
+    pip:
+      packages: [open3d-python]
+  ubuntu:
+    pip:
+      packages: [open3d-python]
 paramiko:
   alpine: [py-paramiko]
   arch: [python2-paramiko]
