@@ -327,6 +327,16 @@ pyqt5-dev-tools:
   fedora: [python-qt5-devel]
   gentoo: [dev-python/PyQt5]
   ubuntu: [pyqt5-dev-tools]
+python-pyrealsense2-pip:
+  debian:
+    pip:
+      packages: [pyrealsense2]
+  fedora:
+    pip:
+      packages: [pyrealsense2]
+  ubuntu:
+    pip:
+      packages: [pyrealsense2]
 pyrebase-pip:
   debian:
     pip:
