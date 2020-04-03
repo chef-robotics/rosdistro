@@ -4651,6 +4651,10 @@ pandoc:
   debian: [pandoc]
   gentoo: [app-text/pandoc]
   ubuntu: [pandoc]
+pcan:
+  ubuntu:
+    source:
+      uri: 'https://raw.githubusercontent.com/luisrayas3/rdmanifests/master/pcan.rdmanifest'
 pcre:
   arch: [pcre]
   debian: [libpcre3-dev]
