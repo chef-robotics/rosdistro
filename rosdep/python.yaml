@@ -2718,6 +2718,10 @@ python-opencv:
   opensuse: [python-opencv]
   slackware: [opencv]
   ubuntu: [python-opencv]
+python-opencv-contrib-python:
+  ubuntu:
+    pip:
+      packages: [opencv-contrib-python]
 python-opengl:
   arch: [python2-opengl]
   debian: [python-opengl]
@@ -3512,6 +3516,10 @@ python-pytorch-pip:
   ubuntu:
     pip:
       packages: [torch, torchvision]
+python-pyttsx3:
+  ubuntu:
+    pip:
+      packages: [pyttsx3]
 python-pytz-pip:
   ubuntu:
     pip:
