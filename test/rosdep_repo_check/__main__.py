@@ -1,4 +1,4 @@
-# Copyright (c) 2017, Open Source Robotics Foundation
+# Copyright (c) 2021, Open Source Robotics Foundation
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -26,20 +26,30 @@
 # POSSIBILITY OF SUCH DAMAGE.
 
 import os
+import sys
+import yaml
 
-from rosdistro.verify import verify_files_identical
-
-from .fold_block import Fold
-
-FILES_DIR = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
+from . import summarize_broken_packages
+from .config import load_config
+from .verify import verify_rules
 
 
-def test_verify_files_identical():
-    with Fold() as fold:
-        print("""Checking if index.yaml and all referenced files comply to the formatting rules.
-If this fails you can run 'rosdistro_reformat index.yaml' to help cleanup.
-'rosdistro_reformat' shows the diff between the current files and their expected formatting.
-""")
+def main():
+    config = load_config()
+    broken = set()
 
-        index_url = 'file://' + FILES_DIR + '/index.yaml'
-        assert verify_files_identical(index_url), fold.get_message()
+    repo_root = os.path.join(os.path.dirname(__file__), '..', '..')
+
+    for path in ('rosdep/base.yaml', 'rosdep/python.yaml'):
+        print("Verify all rosdep keys in '%s'" % path)
+        with open(os.path.join(repo_root, path)) as f:
+            data = yaml.safe_load(f)
+        broken.update(verify_rules(config, data, data))
+
+    if broken:
+        print(summarize_broken_packages(broken), file=sys.stderr)
+        return 1
+
+
+if __name__ == "__main__":
+    sys.exit(main())

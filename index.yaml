@@ -21,6 +21,9 @@ distributions:
   foxy:
     distribution: [foxy/distribution.yaml]
     distribution_cache: http://repo.ros2.org/rosdistro_cache/foxy-cache.yaml.gz
+  galactic:
+    distribution: [galactic/distribution.yaml]
+    distribution_cache: http://repo.ros2.org/rosdistro_cache/galactic-cache.yaml.gz
   groovy:
     distribution: [groovy/distribution.yaml]
     distribution_cache: http://repositories.ros.org/rosdistro_cache/groovy-cache.yaml.gz
@@ -45,5 +48,8 @@ distributions:
   noetic:
     distribution: [noetic/distribution.yaml]
     distribution_cache: http://repositories.ros.org/rosdistro_cache/noetic-cache.yaml.gz
+  rolling:
+    distribution: [rolling/distribution.yaml]
+    distribution_cache: http://repo.ros2.org/rosdistro_cache/rolling-cache.yaml.gz
 type: index
 version: 3

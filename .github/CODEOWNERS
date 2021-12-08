@@ -6,9 +6,8 @@ crystal/* @nuclearsandwich
 dashing/* @nuclearsandwich
 eloquent/* @mjcarroll
 foxy/* @jacobperron
+galactic/* @cottsay
 indigo/* @tfoote
 kinetic/* @tfoote
-lunar/* @clalancette
-melodic/* @clalancette
-noetic/* @sloretz
+rolling/* @nuclearsandwich
 rosdep/* @ros/rosdeputies

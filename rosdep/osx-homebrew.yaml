@@ -38,11 +38,19 @@ bullet:
   osx:
     homebrew:
       packages: [bullet]
+bullet-extras:
+  osx:
+    homebrew:
+      packages: [bullet]
 bzip2:
   osx:
     homebrew:
       packages: []
 checkinstall:
+  osx:
+    homebrew:
+      packages: []
+clang-tidy:
   osx:
     homebrew:
       packages: []
@@ -71,6 +79,10 @@ curl:
     homebrew:
       packages: []
 cython:
+  osx:
+    homebrew:
+      packages: [cython]
+cython3:
   osx:
     homebrew:
       packages: [cython]
@@ -146,7 +158,7 @@ graphviz:
 gtest:
   osx:
     homebrew:
-      packages: [gtest]
+      packages: [googletest]
 gtk2:
   osx:
     homebrew:
@@ -183,10 +195,22 @@ libdmtx-dev:
   osx:
     homebrew:
       packages: [libdmtx]
+libedit:
+  osx:
+    homebrew:
+      packages: [libedit]
+libedit-dev:
+  osx:
+    homebrew:
+      packages: [libedit]
 libfcl-dev:
   osx:
     homebrew:
       packages: [dartsim/dart/fcl]
+libffi-dev:
+  osx:
+    homebrew:
+      packages: []
 libflann:
   osx:
     homebrew:
@@ -231,6 +255,10 @@ liblapack-dev:
   osx:
     homebrew:
       packages: []
+libmsgsl-dev:
+  osx:
+    homebrew:
+      packages: [cpp-gsl]
 libmysqlclient-dev:
   osx:
     homebrew:
@@ -263,6 +291,14 @@ libopenni2-dev:
   osx:
     homebrew:
       packages: [openni2]
+liborocos-kdl:
+  osx:
+    homebrew:
+      packages: [orocos-kdl]
+liborocos-kdl-dev:
+  osx:
+    homebrew:
+      packages: [orocos-kdl]
 libpcap:
   osx:
     homebrew:
@@ -423,6 +459,10 @@ libxml2:
   osx:
     homebrew:
       packages: []
+libxml2-utils:
+  osx:
+    homebrew:
+      packages: []
 libxrandr:
   osx:
     homebrew:
@@ -559,6 +599,10 @@ python-vtk:
   osx:
     homebrew:
       depends: [libvtk]
+python3-pygments:
+  osx:
+    homebrew:
+      packages: [pygments]
 qt5-qmake:
   osx:
     homebrew:
@@ -655,6 +699,10 @@ tinyxml2:
   osx:
     homebrew:
       packages: [tinyxml2]
+trang:
+  osx:
+    homebrew:
+      packages: [jing-trang]
 unzip:
   osx:
     homebrew:

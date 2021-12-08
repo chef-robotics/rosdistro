@@ -1,4 +1,4 @@
-# Copyright (c) 2017, Open Source Robotics Foundation
+# Copyright (c) 2021, Open Source Robotics Foundation
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -26,20 +26,46 @@
 # POSSIBILITY OF SUCH DAMAGE.
 
 import os
+import re
+import yaml
 
-from rosdistro.verify import verify_files_identical
-
-from .fold_block import Fold
-
-FILES_DIR = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
+from .apk import apk_base_url
+from .deb import deb_base_url
+from .rpm import rpm_base_url
 
 
-def test_verify_files_identical():
-    with Fold() as fold:
-        print("""Checking if index.yaml and all referenced files comply to the formatting rules.
-If this fails you can run 'rosdistro_reformat index.yaml' to help cleanup.
-'rosdistro_reformat' shows the diff between the current files and their expected formatting.
-""")
+DEFAULT_CONFIG_PATH = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)),
+    'config.yaml')
 
-        index_url = 'file://' + FILES_DIR + '/index.yaml'
-        assert verify_files_identical(index_url), fold.get_message()
+
+def load_apk_base_url(loader, node):
+    return apk_base_url(node.value)
+
+
+def load_deb_base_url(loader, node):
+    base_url, comp = node.value.rsplit(' ', 1)
+    return deb_base_url(base_url, comp)
+
+
+def load_rpm_base_url(loader, node):
+    return rpm_base_url(node.value)
+
+
+def load_regex(loader, node):
+    return re.compile(node.value)
+
+
+yaml.add_constructor(
+    u'!apk_base_url', load_apk_base_url, Loader=yaml.SafeLoader)
+yaml.add_constructor(
+    u'!deb_base_url', load_deb_base_url, Loader=yaml.SafeLoader)
+yaml.add_constructor(
+    u'!rpm_base_url', load_rpm_base_url, Loader=yaml.SafeLoader)
+yaml.add_constructor(
+    u'!regular_expression', load_regex, Loader=yaml.SafeLoader)
+
+
+def load_config(path=None):
+    with open(path or DEFAULT_CONFIG_PATH) as f:
+        return yaml.safe_load(f)
