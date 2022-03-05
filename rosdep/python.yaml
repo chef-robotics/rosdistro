@@ -2085,6 +2085,10 @@ python-inputs-pip:
   ubuntu:
     pip:
       packages: [inputs]
+python-inquirer:
+  ubuntu:
+    pip:
+      packages: [inquirer]
 python-ipdb:
   debian: [python-ipdb]
   gentoo: [dev-python/ipdb]
