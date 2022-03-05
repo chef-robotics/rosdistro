@@ -190,6 +190,10 @@ intelhex-pip:
   ubuntu:
     pip:
       packages: [intelhex]
+inquirer:
+  ubuntu:
+    pip:
+      packages: [inquirer]
 ipython:
   debian: [ipython]
   fedora: [python-ipython]
