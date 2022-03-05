@@ -190,10 +190,6 @@ intelhex-pip:
   ubuntu:
     pip:
       packages: [intelhex]
-inquirer:
-  ubuntu:
-    pip:
-      packages: [inquirer]
 ipython:
   debian: [ipython]
   fedora: [python-ipython]
@@ -2089,6 +2085,10 @@ python-inputs-pip:
   ubuntu:
     pip:
       packages: [inputs]
+python-inquirer:
+  ubuntu:
+    pip:
+      packages: [inquirer]
 python-ipdb:
   debian: [python-ipdb]
   gentoo: [dev-python/ipdb]
