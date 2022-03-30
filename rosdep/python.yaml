@@ -1750,6 +1750,13 @@ python-google-cloud-bigquery-pip:
   ubuntu:
     pip:
       packages: [google-cloud-bigquery]
+python-google-cloud-storage-pip:
+  debian:
+    pip:
+      packages: [google-cloud-storage]
+  ubuntu:
+    pip:
+      packages: [google-cloud-storage]
 python-google-cloud-speech-pip:
   debian:
     pip:
