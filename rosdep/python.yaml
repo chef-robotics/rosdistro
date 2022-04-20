@@ -1416,7 +1416,7 @@ python-expiringdict:
     pip:
       packages: [expiringdict]
   ubuntu: [python-expiringdict]
-python-fabric:
+python-fabric-pip:
   ubuntu: [fabric]
 python-face-alignment-pip:
   debian:
@@ -2228,7 +2228,7 @@ python-levenshtein:
   fedora: [python-Levenshtein]
   gentoo: [dev-python/python-levenshtein]
   ubuntu: [python-levenshtein]
-python-lexicon:
+python-lexicon-pip:
   ubuntu: [lexicon]
 python-libpcap:
   debian: [python-libpcap]
