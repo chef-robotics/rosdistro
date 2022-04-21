@@ -4468,6 +4468,8 @@ netcdf:
   gentoo: [sci-libs/netcdf, sci-libs/netcdf-cxx, sci-libs/netcdf-fortran]
   macports: [netcdf, netcdf-cxx]
   ubuntu: [libnetcdf-dev]
+nethogs:
+  ubuntu: [nethogs]
 netpbm:
   arch: [netpbm]
   debian: [libnetpbm10-dev]
