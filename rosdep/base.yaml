@@ -4450,6 +4450,10 @@ nasm:
   macports: [nasm]
   opensuse: [nasm]
   ubuntu: [nasm]
+nethogs:
+  ubuntu: [nethogs]
+net-tools:
+  ubuntu: [net-tools]
 nbtscan:
   arch: [nbtscan]
   debian: [nbtscan]
