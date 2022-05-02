@@ -1205,6 +1205,10 @@ python-cython-pip:
   ubuntu:
     pip:
       packages: [cython]
+python-datadog-pip:
+  ubuntu:
+    pip:
+      packages: [datadog]
 python-dateutil:
   arch: [python2-dateutil]
   debian: [python-dateutil]
