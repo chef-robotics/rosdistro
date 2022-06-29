@@ -2435,6 +2435,19 @@ python-msgpack:
   fedora: [python-msgpack]
   gentoo: [dev-python/msgpack]
   ubuntu: [python-msgpack]
+python-mss-pip:
+  debian:
+    pip:
+      packages: [mss]
+  fedora:
+    pip:
+      packages: [mss]
+  gentoo:
+    pip:
+      packages: [mss]
+  ubuntu:
+    pip:
+      packages: [mss]
 python-multicast:
   fedora:
     pip: [py-multicast]
