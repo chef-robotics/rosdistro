@@ -2142,6 +2142,10 @@ python-joblib:
   fedora: [python-joblib]
   gentoo: [dev-python/joblib]
   ubuntu: [python-joblib]
+python-jsonpath-pip:
+  ubuntu: 
+    pip:
+      packages: [jsonpath]
 python-jsonpickle:
   arch: [python-jsonpickle]
   debian: [python-jsonpickle]

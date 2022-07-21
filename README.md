@@ -11,8 +11,9 @@ resolutions, both for pinning and to add our own dependencies.
 
 2. Once created, create a PR in ChefAutonomy (or whatever other repo
   that uses this) to change the branch pointed to by docker builds.
+  For ChefAutonomy, also update `cheftool`.
 
-  Example: https://github.com/chef-robotics/ChefAutonomy/pull/1322
+  Example: https://github.com/chef-robotics/ChefAutonomy/pull/2896
 
 3. Once 2 is accepted and merged, merge your `r.N` branch back into
   `master`; note that dev machines will still use master as the
